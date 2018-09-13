@@ -5,11 +5,17 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
+  - "3.6"
   # does not have headers provided, please ask https://launchpad.net/~pypy/+archive/ppa
   # maintainers to fix their pypy-dev package.
   - "pypy"
   - "pypy3"
 #     # command to install dependencies
+matrix:
+    include:
+    - python: "3.7"
+      sudo: required
+      dist: xenial
 install:
   - pip install setuptools==26.1.1
   - pip install .
